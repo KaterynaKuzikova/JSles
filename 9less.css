@@ -1,0 +1,9 @@
+.listOfContacts{
+    list-style-type: none;
+}
+
+.item-list{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
