@@ -1,0 +1,42 @@
+.container{
+    margin-top: 2%;
+    width: 50%;
+    border: 2px solid black;
+    position: relative;
+}
+
+.informationInput{
+    display: flex;
+}
+
+.inp-cont{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.complite{
+    background-color:green;
+}
+
+.delete{
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+.item-list{
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+    height: 50px;
+    border: 1px solid blue;
+    background-color: rgb(243, 243, 67);
+    position: relative;
+}
+
+ul,li{
+    margin: 0;
+    padding: 0;
+}
