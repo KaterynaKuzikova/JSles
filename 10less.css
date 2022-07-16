@@ -15,16 +15,6 @@
     width: 150px;
 }
 
-.complite{
-    background-color:green;
-}
-
-.delete{
-    position: absolute;
-    top: 0;
-    right: 5px;
-}
-
 .item-list{
     margin-top: 1%;
     display: flex;
@@ -36,7 +26,25 @@
     position: relative;
 }
 
+
+.complite{
+    background-color:lightgreen;
+   
+}
+
+.delete{
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+
 ul,li{
     margin: 0;
     padding: 0;
+}
+
+.error-cont{
+    color: red;
+    font-size: 12px;
 }

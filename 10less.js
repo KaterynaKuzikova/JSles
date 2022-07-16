@@ -1,39 +1,60 @@
 const inputE = document.getElementById("inp");
 const btnE = document.getElementById("btn");
 const containerE = document.querySelector('.container');
+const errorE = document.querySelector('.error-cont');
 
+
+inputE.addEventListener('keyup', isDataListValid);
+btnE.disabled = true;
 btnE.addEventListener("click", onAddList);
 containerE.addEventListener("click", onToDoClick);
 
-function onAddList(){
+function onAddList(e){
         const toDo = inputE.value;
-        if(!isDataListValid(toDo)){
-                alert('enter valid data, please');
-                clearData();
-                return;
-        }
-        const el = createNewToDo(toDo, 'li', 'item-list', 'delete');
+        const el = createNewToDo(toDo, 'delete');
         renderElement(containerE, el);
         clearData();
 
 }
 
-function isDataListValid(toDo){
-        if(!toDo.trim()){
-            return false;
+
+function isDataListValid(e){
+
+        if(!e.target.value.trim()){
+                errorE.innerText = "";
+                btnE.disabled = true;
+                return;
+        }
+        if(e.target.value.trim().length <= 3){
+            errorE.innerText = 'length should be > 3';
+            btnE.disabled = true;
+            return;
          }
-         return true;
+         errorE.innerText = " ";
+         btnE.disabled = false;
+
+         if(e.keyCode === 13){
+                onAddList();
+        }
+
+
+      
      }
+
+
+     document.addEventListener('keydown', function(event){
+        if (event.shiftKey && ['Backspace'].includes(event.key) ) {
+            inputE.value = '';
+        }
+    });
 
 function clearData(){
         inputE.value = "";
 }
 
-function createNewToDo(toDo, containerTag, containerClassName){
-        return `<${containerTag} name="todo" class="${containerClassName}">
-        <div  class="item" ><span name="delete" class="delete">X</span> ${toDo}
-        </div>
-        </${containerTag}>`;
+function createNewToDo(toDo, containerClassName){
+        return `<div  name="todo" class="item-list"><span name="delete" class="delete">X</span> ${toDo}
+        </div>`;
 }
 
 function renderElement(container, el){
@@ -58,5 +79,12 @@ function onDelete(elem){
 }
 
 function compliteToDo(elem){
-        elem.classList.toggle("complite");
+        elem.classList.toggle('complite');
 }
+
+
+
+
+
+
+
