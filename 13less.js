@@ -45,4 +45,4 @@ feGroup.addStudent(new Student('Bob Johnson', [9, 10, 10, 8]));
 console.log(feGroup);
 
 console.log(feGroup.students); // [{},{},{}]
-console.log(feGroup.getAverageMark()); // 20
+console.log(feGroup.getAverageMark()); 
