@@ -91,11 +91,15 @@ class Contact{
             this.editContact(this.#currentContact);
             return;
         }
-        if(e.target.classList.contains(this.#CLASSES.item_title) || e.target.classList.contains(this.#CLASSES.item_body) || e.target.classList.contains(this.#CLASSES.item_phone)){  
-        this.editContact();
-            return;
-        }
     };
+
+    isValid(title, body, phone){
+        if(!title.trim() || !body.trim() || isNaN(+phone)){
+           return false;
+        }
+        return true;
+    }
+    
 
     onSave = () => {
         this.#currentContact.title = this.#editTitle.value;
