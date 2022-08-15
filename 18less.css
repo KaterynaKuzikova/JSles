@@ -1,0 +1,111 @@
+input, button{
+    border-radius: 5px;
+    border: 2px solid darkblue;
+    background-color: lightcyan;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+}
+
+button{
+    cursor: pointer;
+}
+.header{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px auto;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    gap: 4%;
+}
+
+.list{
+    column-gap: 25px;
+    row-gap: 25px;
+    width: 80%;
+    height: 70vh;
+    margin: 0 auto;
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px;
+    height: 70vh;
+    overflow: auto;
+    background-color: lightcyan;
+}
+
+.edit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-container{
+    display: none;
+    flex-direction: column;
+    align-items:center;
+}
+
+.edit-title, 
+.edit-body,
+.edit-phone{
+    margin-bottom: 25px;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    width: 25%;
+    height: 80px;
+    border: 1px solid rgb(72, 165, 194);
+    background-color: rgb(231, 231, 99);
+    border-radius:5px;
+}
+
+.item-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-style: italic;
+}
+
+.item-actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-end;
+    font-weight: bold;
+}
+
+.item-title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.close{
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+}
+
+.item-active{
+    border: 2px solid lightcoral;
+}
+
+.show-edit{
+    display: flex;
+}
+
+.hide-element{
+    display: none;
+}
