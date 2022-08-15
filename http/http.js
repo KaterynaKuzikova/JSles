@@ -1,8 +1,8 @@
 class Http {
-    #endpoint = "http://nestapi-env.eba-9kgvuxij.eu-central-1.elasticbeanstalk.com/contacts";
+    #endpoint = "http://nestapi-env.eba-9kgvuxij.eu-central-1.elasticbeanstalk.com/";
 
-    constructor(){
-        // this.#endpoint += `${entity}/`;
+    constructor(entity){
+        this.#endpoint += `${entity}/`;
     }
 
     getAll(){

@@ -63,7 +63,7 @@ class Contact{
         </div>
         <div class="item-actions">
             <div class="close">X</div>
-            <button class="edit ">Edit</button>
+            <button class="edit">Edit</button>
         </div>
     </div>`;
     }
@@ -92,14 +92,6 @@ class Contact{
             return;
         }
     };
-
-    isValid(title, body, phone){
-        if(!title.trim() || !body.trim() || isNaN(+phone)){
-           return false;
-        }
-        return true;
-    }
-    
 
     onSave = () => {
         this.#currentContact.title = this.#editTitle.value;
@@ -139,16 +131,6 @@ class Contact{
         this.#editBody.value = this.#currentContact.body;
         this.#editPhone.value = this.#currentContact.phone;
     }
-
-    // completeContact(contact){
-    //     contact.isComplete = true;
-    //     this.#http.update(contact.id, contact).then((r) => {
-    //         if(r && r.id){
-    //             this.#currentContactE.classList.add(this.#CLASSES.contact_complete);
-    //             this.clearData();
-    //         }
-    //     })
-    // }
 
     
     removeContact(id){
